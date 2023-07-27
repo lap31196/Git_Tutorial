@@ -1,0 +1,405 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- This URDF was automatically created by SolidWorks to URDF Exporter! Originally created by Stephen Brawner (brawner@gmail.com) 
+     Commit Version: 1.6.0-4-g7f85cfe  Build Version: 1.6.7995.38578
+     For more information, please see http://wiki.ros.org/sw_urdf_exporter -->
+<robot
+  name="Vehiculo_URDF">
+  <link
+    name="base_link">
+    <inertial>
+      <origin
+        xyz="-0.148308470536245 0.0606329921209263 -0.126960040684325"
+        rpy="0 0 0" />
+      <mass
+        value="0.918124750199342" />
+      <inertia
+        ixx="0.000663823174590489"
+        ixy="9.47018014430197E-06"
+        ixz="2.17984498984151E-05"
+        iyy="0.00149589820415092"
+        iyz="-5.00887750584968E-06"
+        izz="0.00182051262498479" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Vehiculo_URDF/meshes/base_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0 0 0 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Vehiculo_URDF/meshes/base_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <link
+    name="back_wheel_left">
+    <inertial>
+      <origin
+        xyz="1.1102E-16 -0.0055555 3.6969E-08"
+        rpy="0 0 0" />
+      <mass
+        value="0.038543" />
+      <inertia
+        ixx="1.5832E-05"
+        ixy="-1.9172E-21"
+        ixz="2.1838E-21"
+        iyy="2.7611E-05"
+        iyz="-7.8379E-11"
+        izz="1.5832E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Vehiculo_URDF/meshes/back_wheel_left.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.50196 0 0 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Vehiculo_URDF/meshes/back_wheel_left.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="joint_back_wheel_left"
+    type="continuous">
+    <origin
+      xyz="-0.26164 0.16927 0.14674"
+      rpy="1.5873 0.014976 0.0079603" />
+    <parent
+      link="base_link" />
+    <child
+      link="back_wheel_left" />
+    <axis
+      xyz="0 1 0" />
+    <limit
+      effort="100"
+      velocity="100" />
+    <dynamics
+      damping="0.1"
+      friction="0.1" />
+  </joint>
+  <link
+    name="back_wheel_right">
+    <inertial>
+      <origin
+        xyz="5.5511E-17 0.0055555 3.6691E-08"
+        rpy="0 0 0" />
+      <mass
+        value="0.038543" />
+      <inertia
+        ixx="1.5832E-05"
+        ixy="-5.5773E-21"
+        ixz="1.8396E-21"
+        iyy="2.7611E-05"
+        iyz="7.7791E-11"
+        izz="1.5832E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Vehiculo_URDF/meshes/back_wheel_right.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.50196 0 0 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Vehiculo_URDF/meshes/back_wheel_right.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="joint_back_wheel_right"
+    type="continuous">
+    <origin
+      xyz="-0.26415 0.17198 -0.019177"
+      rpy="1.5873 0.014976 0.0079603" />
+    <parent
+      link="base_link" />
+    <child
+      link="back_wheel_right" />
+    <axis
+      xyz="0 1 0" />
+    <limit
+      effort="100"
+      velocity="100" />
+    <dynamics
+      damping="0.1"
+      friction="0.1" />
+  </joint>
+  <link
+    name="front_handle_left">
+    <inertial>
+      <origin
+        xyz="-0.003022 0.0098208 -0.010918"
+        rpy="0 0 0" />
+      <mass
+        value="0.0035804" />
+      <inertia
+        ixx="2.2725E-07"
+        ixy="-8.8041E-08"
+        ixz="-2.6452E-13"
+        iyy="3.3018E-07"
+        iyz="7.2923E-14"
+        izz="3.6051E-07" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Vehiculo_URDF/meshes/front_handle_left.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.50196 0.50196 0.50196 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Vehiculo_URDF/meshes/front_handle_left.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="joint_front_handle_left"
+    type="revolute">
+    <origin
+      xyz="-0.0029527 0.15521 0.11611"
+      rpy="1.5873 0.014976 0.0079603" />
+    <parent
+      link="base_link" />
+    <child
+      link="front_handle_left" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      lower="0"
+      upper="0"
+      effort="100"
+      velocity="100" />
+    <dynamics
+      damping="0.1"
+      friction="0.1" />
+  </joint>
+  <link
+    name="front_wheel_left">
+    <inertial>
+      <origin
+        xyz="1.648E-17 -0.0064834 2.498E-16"
+        rpy="0 0 0" />
+      <mass
+        value="0.063174" />
+      <inertia
+        ixx="3.6075E-05"
+        ixy="-7.3809E-21"
+        ixz="-3.1764E-22"
+        iyy="6.2912E-05"
+        iyz="3.9705E-21"
+        izz="3.6075E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Vehiculo_URDF/meshes/front_wheel_left.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.50196 0 0 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Vehiculo_URDF/meshes/front_wheel_left.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="joint_front_wheel_left"
+    type="continuous">
+    <origin
+      xyz="0 0.026485 -0.010918"
+      rpy="0 0 0" />
+    <parent
+      link="front_handle_left" />
+    <child
+      link="front_wheel_left" />
+    <axis
+      xyz="0 1 0" />
+    <limit
+      effort="100"
+      velocity="100" />
+    <dynamics
+      damping="0.1"
+      friction="0.1" />
+  </joint>
+  <link
+    name="front_handle_right">
+    <inertial>
+      <origin
+        xyz="-0.0030221 -0.0098209 -0.010918"
+        rpy="0 0 0" />
+      <mass
+        value="0.0035804" />
+      <inertia
+        ixx="2.2725E-07"
+        ixy="8.8041E-08"
+        ixz="2.8912E-13"
+        iyy="3.3018E-07"
+        iyz="1.2676E-13"
+        izz="3.6051E-07" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Vehiculo_URDF/meshes/front_handle_right.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.50196 0.50196 0.50196 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Vehiculo_URDF/meshes/front_handle_right.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="joint_front_handle_right"
+    type="revolute">
+    <origin
+      xyz="-0.0046594 0.15706 0.003143"
+      rpy="1.5873 0.014976 0.0079603" />
+    <parent
+      link="base_link" />
+    <child
+      link="front_handle_right" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      lower="0"
+      upper="0"
+      effort="100"
+      velocity="100" />
+    <dynamics
+      damping="0.1"
+      friction="0.1" />
+  </joint>
+  <link
+    name="front_wheel_right">
+    <inertial>
+      <origin
+        xyz="1.3444E-17 0.0064834 2.2204E-16"
+        rpy="0 0 0" />
+      <mass
+        value="0.063174" />
+      <inertia
+        ixx="3.6075E-05"
+        ixy="-9.3678E-22"
+        ixz="-1.9852E-21"
+        iyy="6.2912E-05"
+        iyz="1.4823E-21"
+        izz="3.6075E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Vehiculo_URDF/meshes/front_wheel_right.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.50196 0 0 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Vehiculo_URDF/meshes/front_wheel_right.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="joint_front_wheel_right"
+    type="continuous">
+    <origin
+      xyz="0 -0.026485 -0.010918"
+      rpy="0 0 0" />
+    <parent
+      link="front_handle_right" />
+    <child
+      link="front_wheel_right" />
+    <axis
+      xyz="0 1 0" />
+    <limit
+      effort="0.1"
+      velocity="0.1" />
+    <dynamics
+      damping="0.1"
+      friction="0.1" />
+  </joint>
+</robot>
