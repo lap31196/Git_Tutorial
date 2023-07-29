@@ -1,0 +1,613 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- This URDF was automatically created by SolidWorks to URDF Exporter! Originally created by Stephen Brawner (brawner@gmail.com) 
+     Commit Version: 1.6.0-4-g7f85cfe  Build Version: 1.6.7995.38578
+     For more information, please see http://wiki.ros.org/sw_urdf_exporter -->
+<robot
+  name="VehiculoConPrototipo">
+  <link
+    name="base_link">
+    <inertial>
+      <origin
+        xyz="-0.15245 0.060912 -0.14077"
+        rpy="0 0 0" />
+      <mass
+        value="0.78715" />
+      <inertia
+        ixx="0.00062066"
+        ixy="1.0251E-05"
+        ixz="2.201E-05"
+        iyy="0.0014766"
+        iyz="-4.8827E-06"
+        izz="0.0017778" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://VehiculoConPrototipo/meshes/base_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.75294 0.75294 0.75294 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://VehiculoConPrototipo/meshes/base_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <link
+    name="back_wheel_left">
+    <inertial>
+      <origin
+        xyz="-0.021483 0.008395 0.010078"
+        rpy="0 0 0" />
+      <mass
+        value="0.038543" />
+      <inertia
+        ixx="1.5832E-05"
+        ixy="2.5411E-21"
+        ixz="8.2586E-21"
+        iyy="1.5832E-05"
+        iyz="2.872E-21"
+        izz="2.7611E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://VehiculoConPrototipo/meshes/back_wheel_left.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.50196 0 0 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://VehiculoConPrototipo/meshes/back_wheel_left.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="joint_back_wheel_left"
+    type="continuous">
+    <origin
+      xyz="-0.24699 0.18714 0.13117"
+      rpy="0.019586 -0.010611 1.2416" />
+    <parent
+      link="base_link" />
+    <child
+      link="back_wheel_left" />
+    <axis
+      xyz="0 1 0" />
+    <limit
+      effort="100"
+      velocity="100" />
+    <dynamics
+      friction="0.1" />
+  </joint>
+  <link
+    name="back_wheel_right">
+    <inertial>
+      <origin
+        xyz="-0.021483 0.008395 0.010078"
+        rpy="0 0 0" />
+      <mass
+        value="0.038543" />
+      <inertia
+        ixx="1.5832E-05"
+        ixy="0"
+        ixz="1.1514E-21"
+        iyy="1.5832E-05"
+        iyz="-2.8984E-21"
+        izz="2.7611E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://VehiculoConPrototipo/meshes/back_wheel_right.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.50196 0 0 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://VehiculoConPrototipo/meshes/back_wheel_right.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="joint_back_wheel_right"
+    type="continuous">
+    <origin
+      xyz="-0.24763 0.18806 -0.0035251"
+      rpy="-3.1205 0.0072299 0.41444" />
+    <parent
+      link="base_link" />
+    <child
+      link="back_wheel_right" />
+    <axis
+      xyz="0 1 0" />
+    <limit
+      effort="100"
+      velocity="100" />
+    <dynamics
+      damping="0.1"
+      friction="0.1" />
+  </joint>
+  <link
+    name="front_handle_left">
+    <inertial>
+      <origin
+        xyz="-0.003022 0.0098209 6.2968E-09"
+        rpy="0 0 0" />
+      <mass
+        value="0.0035804" />
+      <inertia
+        ixx="2.2725E-07"
+        ixy="-8.8041E-08"
+        ixz="-2.6452E-13"
+        iyy="3.3018E-07"
+        iyz="7.2923E-14"
+        izz="3.6051E-07" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://VehiculoConPrototipo/meshes/front_handle_left.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.50196 0.50196 0.50196 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://VehiculoConPrototipo/meshes/front_handle_left.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="joint_front_handle_left"
+    type="revolute">
+    <origin
+      xyz="-0.0030368 0.16612 0.1163"
+      rpy="1.5873 0.014976 0.0079603" />
+    <parent
+      link="base_link" />
+    <child
+      link="front_handle_left" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      lower="-0.87267"
+      upper="0.87267"
+      effort="100"
+      velocity="100" />
+    <dynamics
+      damping="0.1"
+      friction="0.1" />
+  </joint>
+  <link
+    name="front_wheel_left">
+    <inertial>
+      <origin
+        xyz="-0.021483 0.008395 0.010078"
+        rpy="0 0 0" />
+      <mass
+        value="0.063174" />
+      <inertia
+        ixx="3.6075E-05"
+        ixy="-1.6941E-20"
+        ixz="-2.9726E-20"
+        iyy="3.6075E-05"
+        iyz="-4.2881E-21"
+        izz="6.2912E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://VehiculoConPrototipo/meshes/front_wheel_left.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.50196 0 0 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://VehiculoConPrototipo/meshes/front_wheel_left.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="joint_front_wheel_left"
+    type="continuous">
+    <origin
+      xyz="-0.0072876 0.0099229 -0.021884"
+      rpy="1.5708 0.87681 -3.1416" />
+    <parent
+      link="front_handle_left" />
+    <child
+      link="front_wheel_left" />
+    <axis
+      xyz="0 1 0" />
+    <limit
+      effort="100"
+      velocity="100" />
+    <dynamics
+      friction="0.1" />
+  </joint>
+  <link
+    name="front_handle_right">
+    <inertial>
+      <origin
+        xyz="-0.0030221 0.0098208 9.0743E-09"
+        rpy="0 0 0" />
+      <mass
+        value="0.0035804" />
+      <inertia
+        ixx="2.2725E-07"
+        ixy="-8.8041E-08"
+        ixz="-2.8912E-13"
+        iyy="3.3018E-07"
+        iyz="1.2676E-13"
+        izz="3.6051E-07" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://VehiculoConPrototipo/meshes/front_handle_right.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.50196 0.50196 0.50196 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://VehiculoConPrototipo/meshes/front_handle_right.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="joint_front_handle_right"
+    type="revolute">
+    <origin
+      xyz="-0.0047436 0.16797 0.0033231"
+      rpy="-1.5543 0.014976 0.0079603" />
+    <parent
+      link="base_link" />
+    <child
+      link="front_handle_right" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      lower="-0.87267"
+      upper="0.87267"
+      effort="100"
+      velocity="100" />
+    <dynamics
+      friction="0.1" />
+  </joint>
+  <link
+    name="front_wheel_right">
+    <inertial>
+      <origin
+        xyz="-0.021483 0.008395 0.010078"
+        rpy="0 0 0" />
+      <mass
+        value="0.063174" />
+      <inertia
+        ixx="3.6075E-05"
+        ixy="-1.8794E-21"
+        ixz="9.5539E-23"
+        iyy="3.6075E-05"
+        iyz="7.4115E-22"
+        izz="6.2912E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://VehiculoConPrototipo/meshes/front_wheel_right.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.50196 0 0 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://VehiculoConPrototipo/meshes/front_wheel_right.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="joint_front_wheel_right"
+    type="continuous">
+    <origin
+      xyz="0.021501 0.0099229 0.0083478"
+      rpy="-1.5708 0.0021956 0" />
+    <parent
+      link="front_handle_right" />
+    <child
+      link="front_wheel_right" />
+    <axis
+      xyz="0 1 0" />
+    <limit
+      effort="100"
+      velocity="100" />
+    <dynamics
+      friction="0.1" />
+  </joint>
+  <link
+    name="link">
+    <inertial>
+      <origin
+        xyz="-1.3878E-17 0.01647 -1.3261E-05"
+        rpy="0 0 0" />
+      <mass
+        value="0.064116" />
+      <inertia
+        ixx="1.3212E-05"
+        ixy="1.9852E-22"
+        ixz="-1.3461E-21"
+        iyy="1.3761E-05"
+        iyz="-1.2789E-08"
+        izz="1.3258E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://VehiculoConPrototipo/meshes/link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0 0 0 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://VehiculoConPrototipo/meshes/link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="joint_link"
+    type="fixed">
+    <origin
+      xyz="-0.13181 0.035044 0.05949"
+      rpy="-2.3257 -1.5481 -0.80809" />
+    <parent
+      link="base_link" />
+    <child
+      link="link" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+  <link
+    name="depth_camera">
+    <inertial>
+      <origin
+        xyz="2.7135E-07 0.00767 -4.8129E-05"
+        rpy="0 0 0" />
+      <mass
+        value="0.048199" />
+      <inertia
+        ixx="3.3505E-06"
+        ixy="4.2604E-07"
+        ixz="-2.2343E-09"
+        iyy="2.7389E-05"
+        iyz="7.5486E-09"
+        izz="2.665E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://VehiculoConPrototipo/meshes/depth_camera.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.79216 0.81961 0.93333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://VehiculoConPrototipo/meshes/depth_camera.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="joint_depth_camera"
+    type="fixed">
+    <origin
+      xyz="-0.10108 0.055894 0.059402"
+      rpy="-2.4044 1.5485 2.3158" />
+    <parent
+      link="base_link" />
+    <child
+      link="depth_camera" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+  <link
+    name="camera_left">
+    <inertial>
+      <origin
+        xyz="1.3517E-07 -0.00025619 0.0067093"
+        rpy="0 0 0" />
+      <mass
+        value="0.0050148" />
+      <inertia
+        ixx="3.1349E-07"
+        ixy="3.05E-12"
+        ixz="-9.2173E-12"
+        iyy="3.4979E-07"
+        iyz="-3.6215E-11"
+        izz="2.6383E-07" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://VehiculoConPrototipo/meshes/camera_left.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.25098 0.25098 0.25098 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://VehiculoConPrototipo/meshes/camera_left.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="joint_camera_left"
+    type="fixed">
+    <origin
+      xyz="-0.13803 0.048531 0.087791"
+      rpy="-0.016497 -0.014976 -3.1336" />
+    <parent
+      link="base_link" />
+    <child
+      link="camera_left" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+  <link
+    name="camera_right">
+    <inertial>
+      <origin
+        xyz="1.361E-07 -0.00025619 0.0067093"
+        rpy="0 0 0" />
+      <mass
+        value="0.0050148" />
+      <inertia
+        ixx="3.1349E-07"
+        ixy="3.0256E-12"
+        ixz="-9.2702E-12"
+        iyy="3.4979E-07"
+        iyz="-3.6066E-11"
+        izz="2.6383E-07" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://VehiculoConPrototipo/meshes/camera_right.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.25098 0.25098 0.25098 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://VehiculoConPrototipo/meshes/camera_right.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="joint_camera_right"
+    type="fixed">
+    <origin
+      xyz="-0.13887 0.049445 0.032025"
+      rpy="-3.1251 0.014976 0.0079603" />
+    <parent
+      link="base_link" />
+    <child
+      link="camera_right" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+</robot>
